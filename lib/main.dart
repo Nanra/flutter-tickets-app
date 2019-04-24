@@ -129,7 +129,7 @@ class _HomeScreenTopPartState extends State<HomeScreenTopPart> {
                   SizedBox(
                     height: 40.0,
                   ),
-                  Text('Bade Kamana\nUjang ?',
+                  Text('Mau Kemana\nJuragan ?',
                       style: TextStyle(fontSize: 24.0, color: Colors.white),
                       textAlign: TextAlign.center),
                   SizedBox(
@@ -255,7 +255,7 @@ var homeScreenBottomPart = Column(
         mainAxisSize: MainAxisSize.max,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Text('Current Watched Itmes', style: dropDownMenuItemStyle),
+          Text('Current Watched Items', style: dropDownMenuItemStyle),
           Spacer(),
           Text('VIEW ALL(17)', style: viewAllStyle)
         ],
@@ -273,12 +273,16 @@ var homeScreenBottomPart = Column(
 
 // Var CityCard element
 List<CityCard> cityCards = [
-  CityCard('assets/images/lasvegas.jpg', 'Las Vegas', 'Feb 2019', '45', '4299',
+  CityCard('assets/images/Bandung.jpg', 'Bandung', 'Mei 2019', '35', '5855', '4896'),
+  CityCard('assets/images/Medan.jpg', 'Medan', 'Jun 2019', '50', '6855', '3756'),
+  CityCard('assets/images/Yogyakarta.jpg', 'Yogyakarta', 'Apr 2019', '60', '7859', '4262'),
+  CityCard('assets/images/Jakarta.jpg', 'Jakarta', 'Mar 2019', '20', '6798', '5247'),
+  CityCard('assets/images/lasvegas.jpg', 'Las Vegas', 'Mei 2019', '45', '4299',
       '2250'),
   CityCard(
-      'assets/images/athens.jpg', 'Athens', 'Apr 2019', '50', '6542', '3224'),
+      'assets/images/athens.jpg', 'Athens', 'Jun 2019', '50', '6542', '3224'),
   CityCard(
-      'assets/images/sydney.jpeg', 'Sydney', 'Jan 2019', '30', '3254', '1542'),
+      'assets/images/sydney.jpeg', 'Sydney', 'Jul 2019', '30', '3254', '1542'),
 ];
 
 // Method Widget for List City Picture
