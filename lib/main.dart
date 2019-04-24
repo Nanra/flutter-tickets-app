@@ -273,30 +273,39 @@ var homeScreenBottomPart = Column(
 
 // Var CityCard element
 List<CityCard> cityCards = [
-  CityCard('assets/images/lasvegas.jpg', 'Las Vegas', 'Feb 2019', '45', '4299', '2250'),
-  CityCard('assets/images/athens.jpg', 'Athens', 'Apr 2019', '50', '6542', '3224'),
-  CityCard('assets/images/sydney.jpeg', 'Sydney', 'Jan 2019', '30', '3254', '1542'),
+  CityCard('assets/images/lasvegas.jpg', 'Las Vegas', 'Feb 2019', '45', '4299',
+      '2250'),
+  CityCard(
+      'assets/images/athens.jpg', 'Athens', 'Apr 2019', '50', '6542', '3224'),
+  CityCard(
+      'assets/images/sydney.jpeg', 'Sydney', 'Jan 2019', '30', '3254', '1542'),
 ];
 
 // Method Widget for List City Picture
 class CityCard extends StatelessWidget {
-
   final String imagePath, cityName, monthYear, discount, oldPrice, newPrice;
 
-  CityCard(this.imagePath, this.cityName, this.monthYear, this.discount, this.oldPrice, this.newPrice);
+  CityCard(this.imagePath, this.cityName, this.monthYear, this.discount,
+      this.oldPrice, this.newPrice);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
-      child: Stack(
-        children: <Widget>[
-          Container(
-            height: 210.0,
-            width: 160.0,
-            child: Image.asset(imagePath, fit: BoxFit.cover,),
-          )
-        ],
+      child: ClipRRect(
+        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: 210.0,
+              width: 160.0,
+              child: Image.asset(
+                imagePath,
+                fit: BoxFit.cover,
+              ),
+            )
+          ],
+        ),
       ),
     );
   }
