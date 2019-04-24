@@ -287,14 +287,17 @@ class CityCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: <Widget>[
-        Container(
-          height: 210.0,
-          width: 160.0,
-          child: Image.asset(imagePath, fit: BoxFit.cover,),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      child: Stack(
+        children: <Widget>[
+          Container(
+            height: 210.0,
+            width: 160.0,
+            child: Image.asset(imagePath, fit: BoxFit.cover,),
+          )
+        ],
+      ),
     );
   }
 }
