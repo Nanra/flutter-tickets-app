@@ -303,6 +303,67 @@ class CityCard extends StatelessWidget {
                 imagePath,
                 fit: BoxFit.cover,
               ),
+            ),
+            // For Gradients Backgroun Label
+            Positioned(
+              left: 0.0,
+              bottom: 0.0,
+              width: 160.0,
+              height: 60.0,
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment.bottomCenter,
+                    end: Alignment.topCenter,
+                    colors: [
+                      Colors.black, Colors.black.withOpacity(0.01)
+                    ]
+                  )
+                ),
+              ),
+            ),
+
+            // For Label Text City/MontYear/Discount
+            Positioned(
+              left: 10.0,
+              bottom: 10.0,
+              right: 6.0,
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        cityName,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 18.0),
+                      ),
+                      Text(
+                        monthYear,
+                        style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            color: Colors.white,
+                            fontSize: 14.0),
+                      )
+                    ],
+                  ),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 5.0, vertical: 2.0),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle,
+                        borderRadius: BorderRadius.all(Radius.circular(10.0)),
+                      ),
+                      child: Text(
+                        '$discount%',
+                        style: TextStyle(fontSize: 14.0, color: Colors.black),
+                      ))
+                ],
+              ),
             )
           ],
         ),
